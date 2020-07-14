@@ -1,0 +1,6 @@
+# Ignore files with extension
+*.ini
+*.mkv
+*.odp
+*.ppt
+*.pptx
