@@ -11,11 +11,11 @@ int turn = 0; // indica de quem éa vez
 int wants[2] = {0, 0}; // indica se a tarefa i quer acessar a seção crítica
 
 void enter(int task){ // task pode valer 0 ou 1
+	printf("%d\n", task);
 	int other = 1-task; // indica a outra tarefa
 	wants[task] = 1; // quando 2 processos chamam enter() ao mesmo tempo ambos indicarão seu interesse colocando a respectiva entrada no vetor wants(TRUE)
-	turn = task; // um dos processos deixa a vez (pois altera esta variável por último) e portanto habilita o outro processo a continuar
-	while((turn==task)&&wants[other]){ // espera ocupada
-	}
+	turn = other; // um dos processos deixa a vez (pois altera esta variável por último) e portanto habilita o outro processo a continuar
+	while((turn==other)&&(wants[other]==1)){}; // espera ocupada
 }
 
 void leave(int task){

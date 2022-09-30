@@ -22,11 +22,11 @@ void* depositar(void* v){
 	long tid = (int)(long)v;
 	
 	for(int i=0;i<10000;i++){
-		if(tid!=3){ // todas as tarefas querem usar a região critica?
+		//if(tid!=3){ // todas as tarefas querem usar a região critica?
 			enter(tid);
 			saldo += 1;
 			leave(tid);
-		}
+		//}
 	}
 }
 
