@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-#define NUM_THREADS 8
+#define NUM_THREADS 2
 #define BILHAO 1000000000
 
 long parc[8*NUM_THREADS];
